@@ -6,6 +6,7 @@ public class secondLargest {
         int second = Integer.MIN_VALUE;
         int largest = arr[0];
         boolean secondCheck = false;
+
         int check = 0;
         for (int i = 1; i < n; i++) {
             if (arr[i] > largest) {
