@@ -2,19 +2,25 @@ package Recursion;
 
 public class palindrome {
     public static void main(String[] args) {
-        String str = Integer.toString(121);
-        System.out.println(isPalindrome(str));
+
+        System.out.println(isPalindrome(1291));
 
     }
 
-    static boolean isPalindrome(String str){
-        if(str.length() <= 1){
-            return true;
-        }
-        if(str.charAt(0) == str.charAt(str.length() - 1)){
-            return  isPalindrome(str.substring(1,str.length()-1));
-        }else {
-            return false;
-        }
+    static boolean isPalindrome(int n){
+        int rev = reverse2(n);
+        return n == rev;
     }
+    static int reverse2(int n){
+        int digits = (int)(Math.log10(n) + 1);
+        return helper(n,digits);
+    }
+    static int helper(int n, int arg){
+        if(n % 10 == n){
+            return n;
+        }
+        int rem = n % 10;
+        return (int) (rem * Math.pow(10, arg - 1) + helper(n/10, arg -1));
+    }
+
 }
