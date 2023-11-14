@@ -2,9 +2,7 @@ package Recursion;
 
 public class palindrome {
     public static void main(String[] args) {
-
         System.out.println(isPalindrome(1291));
-
     }
 
     static boolean isPalindrome(int n){
