@@ -1,17 +1,17 @@
 package Array;
 
-class maxWealth{
+class maxWealth {
     public int maximumWealth(int[][] accounts) {
-        int sum=0;
+        int sum = 0;
         int max = 0;
-        for(int i=0; i<accounts.length; i++){
-            for(int j=0; j<accounts[i].length; j++){
+        for (int i = 0; i < accounts.length; i++) {
+            for (int j = 0; j < accounts[i].length; j++) {
                 sum += accounts[i][j];
             }
-            if(sum > max){
+            if (sum > max) {
                 max = sum;
             }
-            sum=0; //rememeber to clean up sum after each traversal 
+            sum = 0; //rememeber to clean up sum after each traversal
         }
         return max;
     }
