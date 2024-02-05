@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class Solution {
-    public int[] createTargetArray(int[] nums, int[] index) {
+class TargetArray {
+   static public int[] createTargetArray(int[] nums, int[] index) {
         int n = nums.length;
         List<Integer> list = new ArrayList<>();
         int[] target = new int[n];
